@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeLlevoApp</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #f2f2f2;
+        }
+
+        header {
+        position: relative;
+        }
+
+         img {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+         }
+
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+
+        .download-links {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #f2f2f2;
+        }
+    </style>
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="imagenes/duocuc.png" alt="Logo de tu empresa">
+        <h1>Te Llevo App</h1>
+        <p>¡Descarga nuestra increíble aplicación y llega seguro a casa despues de clases!</p>
+    </header>
+    
+
+    <section>
+        <h2>Descripción</h2>
+        <p>Descripción breve de tu aplicación y sus características principales.</p>
+    </section>
+
+    <section>
+        <h2>Descargar la Aplicación</h2>
+        <div class="download-links">
+            <a id="android-link" href="#" target="_blank">Descargar para Android</a>
+            <a id="ios-link" href="#" target="_blank">Descargar para iOS</a>
+        </div>
+    </section>
+
+    <section>
+        <h2>Contacto</h2>
+        <p>¿Tienes preguntas o comentarios? Contáctanos:</p>
+        <p>Email: contacto@tellevoapp.cl</p>
+        <p>Teléfono: +123 456 7890</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Te Llevo App</p>
+    </footer>
+
+    <script>
+        // JavaScript para detectar el tipo de dispositivo
+        function detectarDispositivo() {
+            var esCelular = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            var androidLink = document.getElementById('android-link');
+            var iosLink = document.getElementById('ios-link');
+
+            if (esCelular) {
+                androidLink.href = '#link-para-android-en-celular';
+                iosLink.href = '#link-para-ios-en-celular';
+            } else {
+                androidLink.href = '#link-para-android-en-computadora';
+                iosLink.href = '#link-para-ios-en-computadora';
+            }
+        }
+
+        // Llamar a la función de detección al cargar la página
+        detectarDispositivo();
+    </script>
+
+</body>
+</html>
